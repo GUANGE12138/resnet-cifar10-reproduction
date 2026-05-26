@@ -1,0 +1,30 @@
+seed: 42
+device: cuda
+dataset:
+  name: cifar10
+  root: ./data
+  num_classes: 10
+  in_channels: 3
+  download: true
+  num_workers: 4
+training:
+  epochs: 120
+  batch_size: 128
+  optimizer: sgd
+  lr: 0.1
+  momentum: 0.9
+  weight_decay: 0.0001
+  scheduler: multistep
+  milestones:
+  - 60
+  - 90
+  gamma: 0.1
+  amp: true
+augmentation:
+  random_crop: true
+  random_horizontal_flip: true
+  normalize: cifar10
+logging:
+  output_dir: outputs
+  save_best: true
+  monitor: val_acc

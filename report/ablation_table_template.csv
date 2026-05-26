@@ -1,0 +1,8 @@
+exp_id,model,dataset,shortcut,depth,optimizer,scheduler,augmentation,best_val_acc,final_train_acc,final_val_acc,conclusion
+E1,PlainNet-18,CIFAR-10,no,18,SGD,MultiStep,basic,,,,
+E2,PlainNet-34,CIFAR-10,no,34,SGD,MultiStep,basic,,,,
+E3,ResNet-18,CIFAR-10,yes,18,SGD,MultiStep,basic,,,,
+E4,ResNet-34,CIFAR-10,yes,34,SGD,MultiStep,basic,,,,
+A1,ResNet-34-no-shortcut,CIFAR-10,no,34,SGD,MultiStep,basic,,,,
+A2,ResNet-34-AdamW,CIFAR-10,yes,34,AdamW,Cosine,basic,,,,
+F1,ResNet-34-small-data,CIFAR-10,yes,34,SGD,MultiStep,basic,,,,

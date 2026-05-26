@@ -1,0 +1,5 @@
+model,best_epoch,best_val_acc,final_train_acc,final_val_acc
+PlainNet-18,93,94.12,99.95777777777778,93.88
+PlainNet-34,100,92.06,99.82666665988498,91.72
+ResNet-18,111,94.3,99.98,94.02
+ResNet-34,90,94.4,99.98222222222222,94.4

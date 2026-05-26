@@ -1,0 +1,3 @@
+model,best_epoch,best_val_acc,final_train_acc,final_val_acc
+ResNet-34-full-data,90,94.4,99.98222222222222,94.4
+ResNet-34-small-data,119,66.38,98.68888888888888,65.34

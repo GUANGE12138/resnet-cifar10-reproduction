@@ -1,0 +1,35 @@
+seed: 42
+device: cuda
+dataset:
+  name: cifar10
+  root: ./data
+  num_classes: 10
+  in_channels: 3
+  download: true
+  num_workers: 4
+training:
+  epochs: 120
+  batch_size: 128
+  optimizer: adamw
+  lr: 0.001
+  momentum: 0.9
+  weight_decay: 0.0001
+  scheduler: cosine
+  amp: true
+augmentation:
+  random_crop: true
+  random_horizontal_flip: true
+  normalize: cifar10
+logging:
+  output_dir: outputs
+  save_best: true
+  monitor: val_acc
+experiment_name: ablation_resnet34_adamw_cosine
+model:
+  name: resnet
+  depth: 34
+  block: basic
+  use_shortcut: true
+  shortcut_type: projection
+  zero_init_residual: false
+  cifar_stem: true
